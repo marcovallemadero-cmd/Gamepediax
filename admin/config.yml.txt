@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "games"
+    label: "Mis Juegos"
+    folder: "data/games"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - {label: "ID", name: "id", widget: "number"}
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Año", name: "year", widget: "string"}
+      - {label: "Portada (URL)", name: "cover", widget: "string"}
+      - {label: "Descripción", name: "description", widget: "text"}
